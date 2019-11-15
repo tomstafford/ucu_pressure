@@ -116,6 +116,11 @@ ax1.plot(C[:-1], color=color,lw=lwparam)
 ax1.plot(C[:-1], color=color,marker=mark,ms=marksize)
 ax1.tick_params(axis='y', labelcolor=color)
 
+plt.title('Data from "Pressure Vessels: The epidemic of \npoor mental health among higher education staff"\n - Liz Morrish/HEPI')
+fig.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.savefig('figs/totals_counselling.png',bbox_inches='tight')
+
+
 ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
 
 color = 'tab:blue'
@@ -124,12 +129,10 @@ ax2.plot(O[:-1], color=color,lw=lwparam)
 ax2.plot(O[:-1], color=color,marker=mark,ms=marksize)
 ax2.tick_params(axis='y', labelcolor=color)
 
-fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
 
 #ax1.annotate('Data: "Pressure Vessels: The epidemic of \npoor mental health among higher education staff"\n - Liz Morrish/HEPI',xycoords='figure fraction',xy=(0.2,0.8),fontsize=7) 
 
-plt.title('Data from "Pressure Vessels: The epidemic of \npoor mental health among higher education staff"\n - Liz Morrish/HEPI')
 plt.savefig('figs/totals.png',bbox_inches='tight')
 
 
